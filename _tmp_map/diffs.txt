@@ -1,0 +1,447 @@
+====================index_lost(2236->2241)
+--- 
++++ 
+@@ -10,3 +10,3 @@
+   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 30 16 16 30 2 16Z' fill='%23a3312a'/%3E%3Cpath d='M16 9 23 16 16 23 9 16Z' fill='%23f6f1e7'/%3E%3C/svg%3E">
+-  <link rel="stylesheet" href="assets/css/main.css?v=54">
++  <link rel="stylesheet" href="assets/css/main.css?v=48">
+ </head>
+@@ -99,13 +99,11 @@
+   <script src="data/structure.js?v=2"></script>
+-  <script src="data/site.js?v=19"></script>
+-  <script src="data/i18n.js?v=49"></script>
++  <script src="data/site.js?v=14"></script>
++  <script src="data/i18n.js?v=47"></script>
+   <script src="data/front.js?v=2"></script>
+-  <script src="data/map.js?v=1"></script>
+-  <script src="data/content.js?v=46"></script>
++  <script src="data/content.js?v=45"></script>
+   <script src="assets/js/core.js?v=48"></script>
+-  <script src="assets/js/views.js?v=51"></script>
++  <script src="assets/js/views.js?v=46"></script>
+   <script src="assets/js/search.js?v=47"></script>
+   <script src="assets/js/motion.js?v=2"></script>
+-  <script src="assets/js/map.js?v=3"></script>
+-  <script src="assets/js/app.js?v=3"></script>
++  <script src="assets/js/app.js?v=2"></script>
+ </body>
+====================index_legal(2241->2242)
+--- 
++++ 
+@@ -10,3 +10,3 @@
+   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 30 16 16 30 2 16Z' fill='%23a3312a'/%3E%3Cpath d='M16 9 23 16 16 23 9 16Z' fill='%23f6f1e7'/%3E%3C/svg%3E">
+-  <link rel="stylesheet" href="assets/css/main.css?v=48">
++  <link rel="stylesheet" href="assets/css/main.css?v=49">
+ </head>
+@@ -66,2 +66,6 @@
+     </div>
++    <div class="site-footer__legal">
++      <p data-i18n="footerCopy">© Niyazi Kılıç. Tüm hakları saklıdır. İzinsiz kopyalanması ve çoğaltılması yasaktır.</p>
++      <a href="#/tr/kunye" data-legal-link data-i18n="legalLink">Künye ve yasal uyarı</a>
++    </div>
+   </footer>
+@@ -100,10 +104,10 @@
+   <script src="data/site.js?v=14"></script>
+-  <script src="data/i18n.js?v=47"></script>
+-  <script src="data/front.js?v=2"></script>
++  <script src="data/i18n.js?v=48"></script>
++  <script src="data/front.js?v=3"></script>
+   <script src="data/content.js?v=45"></script>
+-  <script src="assets/js/core.js?v=48"></script>
+-  <script src="assets/js/views.js?v=46"></script>
++  <script src="assets/js/core.js?v=49"></script>
++  <script src="assets/js/views.js?v=47"></script>
+   <script src="assets/js/search.js?v=47"></script>
+   <script src="assets/js/motion.js?v=2"></script>
+-  <script src="assets/js/app.js?v=2"></script>
++  <script src="assets/js/app.js?v=3"></script>
+ </body>
+====================views_lost
+--- 
++++ 
+@@ -364,63 +364,16 @@
+ 
+-  /* Türkei-Karte (data/map.js) mit den Yöre-Einträgen; Bedienung in assets/js/map.js */
++  /* Vereinfachte Kartenskizze: Punkte nach Längen-/Breitengrad, kein Kartenmaterial */
+   function regionMap(regions) {
+-    var M = HD.mapData, P = M.proj, lang = C.state.lang;
+-    function xy(geo) { return [((geo[0] - P.lon0) * P.kx).toFixed(1), ((P.lat1 - geo[1]) * P.ky).toFixed(1)]; }
+-    var regionOf = {};
+-    regions.forEach(function (r) {
+-      (HD.site.regionProvinces[r.number] || []).forEach(function (name) { regionOf[name] = r.number; });
+-    });
+-
+-    var provinces = M.provinces.map(function (p) {
+-      var reg = regionOf[p.name];
+-      return '<path class="atlas__prov' + (reg ? " is-region" : "") + '" d="' + p.d + '" data-prov="' + esc(p.name) + '"' +
+-        (reg ? ' data-region="' + esc(reg) + '"' : "") + "/>";
+-    }).join("");
+-
+-    var labels = M.provinces.map(function (p) {
+-      return '<text class="atlas__pname" x="' + p.x + '" y="' + p.y + '">' + esc(p.name) + "</text>";
+-    }).join("") + HD.site.mapLabels.map(function (l) {
+-      var c = xy(l.at);
+-      return '<text class="atlas__label atlas__label--' + l.kind + '" x="' + c[0] + '" y="' + c[1] + '"' +
+-        (l.anchor ? ' text-anchor="' + l.anchor + '" style="text-anchor:' + l.anchor + '"' : "") + ">" +
+-        esc(l.name[lang] || l.name.tr) + "</text>";
+-    }).join("");
+-
+-    var markers = regions.map(function (r) {
+-      var geo = HD.site.regionGeo[r.number];
+-      if (!geo) return "";
+-      var c = xy(geo);
+-      return '<a class="atlas__marker" href="' + C.href.node(r) + '" data-region="' + esc(r.number) + '" data-x="' + c[0] + '" data-y="' + c[1] +
+-        '" transform="translate(' + c[0] + " " + c[1] + ')" aria-label="' + esc(C.title(r)) + '">' +
+-        '<g class="atlas__pin"><circle class="atlas__halo" r="13"/><circle class="atlas__dot" r="7"/></g></a>';
+-    }).join("");
+-
+-    var tips = {};
+-    regions.forEach(function (r) { tips[r.number] = C.title(r); });
+-
+-    return '<div class="atlas reveal" data-atlas data-tips="' + esc(JSON.stringify(tips)) + '">' +
+-      '<div class="atlas__stage" data-atlas-stage>' +
+-      '<svg class="atlas__svg" viewBox="0 0 ' + M.w + " " + M.h + '" style="--ratio:' + (M.w / M.h).toFixed(4) + '" role="group" aria-label="' + esc(t("mapLabel")) + '">' +
+-      '<rect class="atlas__sea" width="' + M.w + '" height="' + M.h + '"/>' +
+-      '<g data-atlas-view>' +
+-      '<path class="atlas__land" d="' + M.land + '"/><path class="atlas__land atlas__land--plain" d="' + M.landPlain + '"/>' +
+-      '<path class="atlas__shadow" d="' + M.outline + '"/>' +
+-      '<g class="atlas__provs">' + provinces + "</g>" +
+-      '<path class="atlas__lakes" d="' + M.lakes + '"/>' +
+-      '<path class="atlas__outline" d="' + M.outline + '"/>' +
+-      '<g class="atlas__labels" aria-hidden="true">' + labels + "</g>" +
+-      '<g class="atlas__markers">' + markers + "</g>" +
+-      "</g></svg>" +
+-      '<div class="atlas__tip" data-atlas-tip hidden></div>' +
+-      '<div class="atlas__zoom">' +
+-      '<button type="button" data-atlas-zoom="in" aria-label="' + esc(t("mapZoomIn")) + '" title="' + esc(t("mapZoomIn")) + '">+</button>' +
+-      '<button type="button" data-atlas-zoom="out" aria-label="' + esc(t("mapZoomOut")) + '" title="' + esc(t("mapZoomOut")) + '">−</button>' +
+-      '<button type="button" data-atlas-zoom="reset" aria-label="' + esc(t("mapReset")) + '" title="' + esc(t("mapReset")) + '">' +
+-      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3M4 4v4h4"/></svg></button>' +
+-      '<button type="button" data-atlas-full aria-label="' + esc(t("mapFull")) + '" title="' + esc(t("mapFull")) + '">' +
+-      '<svg class="atlas__ico-full" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 15v5h-5M4 4l6 6M20 20l-6-6"/></svg>' +
+-      '<svg class="atlas__ico-exit" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4v6H4M14 20v-6h6M4 4l6 6M20 20l-6-6"/></svg></button>' +
+-      "</div>" +
+-      '<p class="atlas__credit">' + esc(t("mapHint")) + "</p>" +
+-      "</div>" +
++    var lon = [25.5, 45], lat = [35.8, 42.3];
++    return '<div class="region-map reveal">' +
++      '<span class="region-map__bg" aria-hidden="true" style="background-image:url(' + WELCOME_IMG + ')"></span>' +
++      regions.map(function (r) {
++        var geo = HD.site.regionGeo[r.number];
++        if (!geo) return "";
++        var x = ((geo[0] - lon[0]) / (lon[1] - lon[0])) * 100;
++        var y = (1 - (geo[1] - lat[0]) / (lat[1] - lat[0])) * 100;
++        var edge = x > 75 ? " region-dot--end" : x < 20 ? " region-dot--start" : "";
++        return '<a class="region-dot' + edge + '" style="left:' + x.toFixed(1) + "%;top:" + y.toFixed(1) + '%" href="' +
++          C.href.node(r) + '"><span class="region-dot__label"' + C.titleLangAttr(r) + ">" + T(r) + "</span></a>";
++      }).join("") +
+       "</div>";
+@@ -492,4 +445,3 @@
+     } else if (subpages.length) {
+-      html += (body ? "" : phText(5)) + (page.number === HD.site.regionsChapter ? regionMap(subpages) : "") +
+-        '<div class="card-grid card-grid--entry">' + subpages.map(card).join("") + "</div>";
++      html += (body ? "" : phText(5)) + '<div class="card-grid card-grid--entry">' + subpages.map(card).join("") + "</div>";
+     } else if (!body) {
+====================views_legal
+--- 
++++ 
+@@ -543,2 +543,21 @@
+ 
++  function legal() {
++    var front = HD.front[C.state.lang] || HD.front[HD.site.defaultLang];
++    var printed = front.legal.map(function (block) {
++      return '<h3 class="legal-page__h" lang="tr">' + esc(block.title) + "</h3>" +
++        block.paragraphs.map(function (p) { return '<p lang="tr">' + esc(p) + "</p>"; }).join("");
++    }).join("");
++    return '<section class="legal-page container">' +
++      '<header class="toc-page__head">' +
++      '<p class="eyebrow">' + esc(C.title(HD.structure.book)) + "</p>" +
++      '<h1 tabindex="-1">' + esc(t("legalTitle")) + "</h1>" +
++      '<p class="lead">' + esc(t("legalLead")) + "</p></header>" +
++      '<div class="prose legal-page__body">' +
++      "<h2>" + esc(t("legalCopyTitle")) + "</h2><p>" + esc(t("footerCopy")) + "</p>" +
++      "<h2>" + esc(t("legalPrintTitle")) + "</h2><p class=\"muted\">" + esc(t("legalPrintNote")) + "</p>" +
++      '<div class="legal-page__print">' + printed + "</div>" +
++      "<h2>" + esc(t("legalImprintTitle")) + "</h2><p class=\"muted\">" + esc(t("legalImprintTodo")) + "</p>" +
++      "</div></section>";
++  }
++
+   function notFound() {
+@@ -549,3 +568,3 @@
+ 
+-  HD.views = { home: home, entry: entry, toc: toc, intro: intro, notFound: notFound, drawerNav: drawerNav, footerNav: footerNav };
++  HD.views = { home: home, entry: entry, toc: toc, intro: intro, legal: legal, notFound: notFound, drawerNav: drawerNav, footerNav: footerNav };
+ })(window.HD);
+====================css_lost
+--- 
++++ 
+@@ -383,3 +383,3 @@
+ /* ---------- Seitenwechsel & Scroll-Einblendung ---------- */
+-#app.is-entering { animation: page-in 0.7s var(--ease-out) backwards; }
++#app.is-entering { animation: page-in 0.7s var(--ease-out) both; }
+ @keyframes page-in {
+@@ -804,89 +804,50 @@
+ .regions { padding-block: var(--section); }
+-
+-/* ---------- Türkei-Karte ---------- */
+-.atlas { margin-bottom: clamp(48px, 7vw, 88px); }
+-.atlas__stage {
++.region-map {
+   position: relative;
+-  overflow: hidden;
++  aspect-ratio: 2.3 / 1;
++  margin-bottom: clamp(48px, 7vw, 88px);
+   border-radius: var(--radius);
+-  border: 1px solid var(--line);
++  border: 1px dashed var(--line-strong);
+   background:
+-    radial-gradient(120% 90% at 50% 35%, #e9eeec 0%, #dbe3e3 55%, #ccd7d9 100%);
+-  box-shadow: var(--shadow);
+-}
+-.atlas__svg {
+-  display: block;
+-  width: 100%;
+-  height: auto;
+-  touch-action: pan-y pinch-zoom;
+-  -webkit-user-select: none;
+-  user-select: none;
+-  -webkit-tap-highlight-color: transparent;
+-}
+-.atlas.is-zoomed .atlas__svg { touch-action: none; cursor: grab; }
+-.atlas.is-dragging .atlas__svg { cursor: grabbing; }
+-[data-atlas-view] { transform-origin: 0 0; }
+-[data-atlas-view].is-animated { transition: transform 0.5s var(--ease-out); }
+-
+-.atlas__sea { fill: transparent; }
+-.atlas__land { fill: #ece6da; stroke: #d3c8b6; stroke-width: 0.7px; vector-effect: non-scaling-stroke; }
+-.atlas__land--plain { stroke: none; }
+-.atlas__shadow { fill: rgba(70, 45, 25, 0.22); transform: translate(1px, 2.5px); filter: blur(3px); pointer-events: none; }
+-.atlas__prov {
+-  fill: #fcf9f3;
+-  stroke: #d6c7b1;
+-  stroke-width: 0.6px;
+-  stroke-linejoin: round;
+-  vector-effect: non-scaling-stroke;
+-  transition: fill 0.25s var(--ease);
+-}
+-.atlas__prov:hover { fill: #f3ebdd; }
+-.atlas__prov.is-region { fill: #f2d9cd; stroke: #d9b4a3; }
+-.atlas__prov.is-region.is-active { fill: #dd8f78; }
+-.atlas__lakes { fill: #cdd8da; stroke: #b5c3c6; stroke-width: 0.6px; vector-effect: non-scaling-stroke; pointer-events: none; }
+-.atlas__outline {
+-  fill: none;
+-  stroke: #8a6a52;
+-  stroke-width: 1.3px;
+-  stroke-linejoin: round;
+-  vector-effect: non-scaling-stroke;
++    radial-gradient(circle at 1px 1px, var(--skeleton) 1px, transparent 1.5px) 0 0 / 22px 22px,
++    var(--ph-bg);
++}
++.region-map__bg {
++  position: absolute;
++  inset: 0;
++  border-radius: inherit;
++  background: center / cover no-repeat;
++  opacity: 0.14;
++  filter: blur(6px) saturate(0.8);
+   pointer-events: none;
+ }
+-
+-.atlas__label {
+-  font-family: var(--font-sans);
+-  font-size: calc(11.5px * var(--k, 1));
+-  letter-spacing: 0.16em;
+-  text-transform: uppercase;
+-  text-anchor: middle;
+-  pointer-events: none;
+-}
+-.atlas__label--land { fill: #a8987f; }
+-.atlas__label--sea, .atlas__label--sea-sm { fill: #7f979c; font-family: var(--font-display); font-style: italic; text-transform: none; letter-spacing: 0.08em; font-size: calc(15px * var(--k, 1)); }
+-.atlas__label--sea-sm { font-size: calc(10.5px * var(--k, 1)); }
+-.atlas__pname {
+-  fill: #8d7b66;
+-  font-family: var(--font-sans);
+-  font-size: calc(10.5px * var(--k, 1));
+-  text-anchor: middle;
+-  pointer-events: none;
++.region-dot {
++  position: absolute;
++  width: 16px; height: 16px;
++  margin: -8px 0 0 -8px;
++  border-radius: 50%;
++  background: var(--accent);
++  box-shadow: 0 0 0 4px var(--accent-soft);
++  transition: transform 0.3s var(--ease-out), box-shadow 0.3s;
++}
++.region-dot::after {
++  content: "";
++  position: absolute;
++  inset: -4px;
++  border-radius: 50%;
++  border: 1px solid var(--accent);
+   opacity: 0;
+-  transition: opacity 0.3s;
+-}
+-.atlas.is-zoomed-2 .atlas__pname { opacity: 1; }
+-
+-.atlas__pin { transform: scale(calc(var(--k, 1) * var(--pin, 1))); transition: transform 0.3s var(--ease-out); }
+-.atlas__marker.is-active .atlas__pin, .atlas__marker:focus-visible .atlas__pin { transform: scale(calc(var(--k, 1) * var(--pin, 1) * 1.2)); }
+-.atlas__marker:focus { outline: none; }
+-.atlas__dot { fill: var(--accent); stroke: #fff; stroke-width: 2; filter: drop-shadow(0 1px 1.5px rgba(40, 20, 10, 0.35)); }
+-.atlas__halo { fill: var(--accent); opacity: 0; transition: opacity 0.25s; }
+-.atlas__marker.is-active .atlas__halo { opacity: 0.22; }
+-.atlas__marker:focus-visible .atlas__halo { opacity: 0.3; stroke: var(--ink); stroke-width: 1.5; }
+-.atlas__marker.is-active .atlas__dot { fill: #7e2019; }
+-
+-.atlas__tip {
++  animation: pulse 3.2s var(--ease) infinite;
++}
++.region-dot:nth-child(3n)::after { animation-delay: 1s; }
++.region-dot:nth-child(3n + 1)::after { animation-delay: 2s; }
++@keyframes pulse {
++  0% { transform: scale(0.6); opacity: 0.8; }
++  70%, 100% { transform: scale(2.2); opacity: 0; }
++}
++.region-dot:hover, .region-dot:focus-visible { transform: scale(1.3); z-index: 2; }
++.region-dot__label {
+   position: absolute;
+-  z-index: 3;
+-  max-width: min(80%, 22rem);
+-  padding: 6px 11px;
++  left: 50%; bottom: calc(100% + 10px);
++  padding: 5px 10px;
+   border-radius: 8px;
+@@ -894,71 +855,14 @@
+   color: var(--bg);
+-  font-size: 0.82rem;
+-  line-height: 1.3;
+-  text-align: center;
++  font-size: 0.8rem;
++  white-space: nowrap;
+   pointer-events: none;
+-  transform: translate(-50%, -100%);
+-  box-shadow: 0 6px 18px -6px rgba(0, 0, 0, 0.4);
+-}
+-.atlas__tip::after {
+-  content: "";
+-  position: absolute;
+-  left: 50%; top: 100%;
+-  margin-left: -5px;
+-  border: 5px solid transparent;
+-  border-top-color: var(--ink);
+-}
+-
+-.atlas__zoom {
+-  position: absolute;
+-  right: 14px; bottom: 14px;
+-  display: grid;
+-  border-radius: 12px;
+-  overflow: hidden;
+-  background: rgba(252, 249, 243, 0.92);
+-  border: 1px solid var(--line-strong);
+-  box-shadow: 0 4px 14px -6px rgba(40, 25, 15, 0.35);
+-}
+-.atlas__zoom button {
+-  display: grid;
+-  place-items: center;
+-  width: 38px; height: 38px;
+-  border: 0;
+-  background: transparent;
+-  color: var(--ink);
+-  font: 500 1.25rem/1 var(--font-sans);
+-  cursor: pointer;
+-}
+-.atlas__zoom button + button { border-top: 1px solid var(--line); }
+-.atlas__zoom button:hover { background: var(--accent-soft); color: var(--accent); }
+-.atlas__zoom button:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+-.atlas__zoom svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+-.atlas__ico-exit, .atlas.is-full .atlas__ico-full { display: none; }
+-.atlas.is-full .atlas__ico-exit { display: block; }
+-html.atlas-open { overflow: hidden; }
+-.atlas.is-full .atlas__stage {
+-  position: fixed;
+-  inset: 0;
+-  z-index: 1000;
+-  display: flex;
+-  flex-direction: column;
+-  justify-content: center;
+-  border: 0;
+-  border-radius: 0;
+-}
+-.atlas.is-full .atlas__svg {
+-  width: min(100%, calc(100vh * var(--ratio)));
+-  width: min(100%, calc(100dvh * var(--ratio)));
+-  margin-inline: auto;
+-}
+-.atlas__credit {
+-  position: absolute;
+-  left: 12px; bottom: 10px;
+-  margin: 0;
+-  padding: 3px 9px;
+-  border-radius: 6px;
+-  background: rgba(252, 249, 243, 0.8);
+-  color: var(--muted);
+-  font-size: 0.72rem;
+-  pointer-events: none;
+-}
++  opacity: 0;
++  transform: translate(-50%, 4px);
++  transition: opacity 0.2s, transform 0.25s var(--ease);
++}
++.region-dot:hover .region-dot__label, .region-dot:focus-visible .region-dot__label { opacity: 1; transform: translate(-50%, 0); }
++.region-dot--end .region-dot__label { left: auto; right: -6px; transform: translate(0, 4px); }
++.region-dot--start .region-dot__label { left: -6px; transform: translate(0, 4px); }
++.region-dot--end:hover .region-dot__label, .region-dot--end:focus-visible .region-dot__label,
++.region-dot--start:hover .region-dot__label, .region-dot--start:focus-visible .region-dot__label { transform: none; }
+ 
+@@ -1397,10 +1301,4 @@
+   .rail { grid-auto-columns: 74vw; gap: 16px; }
+-  .atlas__stage { border-radius: 12px; }
+-  .atlas__svg { --pin: 0.7; }
+-  .atlas__label--land { display: none; }
+-  .atlas__label--sea { font-size: calc(12px * var(--k, 1)); }
+-  .atlas__zoom { bottom: 8px; right: 8px; grid-auto-flow: column; }
+-  .atlas__zoom button { width: 32px; height: 32px; font-size: 1.1rem; }
+-  .atlas__zoom button + button { border-top: 0; border-left: 1px solid var(--line); }
+-  .atlas__credit { position: static; margin: 0; padding: 10px 124px 10px 12px; border-radius: 0; background: var(--bg-raised); }
++  .region-map { aspect-ratio: 1.5 / 1; }
++  .region-dot { width: 13px; height: 13px; margin: -6.5px 0 0 -6.5px; }
+   .chapter-list a { grid-template-columns: 2.8em 1fr 20px; }
+@@ -1432,2 +1330,3 @@
+   .hero-img { transform: none; }
++  .region-dot::after { display: none; }
+ }
+====================css_legal
+--- 
++++ 
+@@ -1153,3 +1153,3 @@
+   margin-inline: auto;
+-  padding: 64px var(--gutter) 80px;
++  padding: 64px var(--gutter) 48px;
+ }
+@@ -1162,2 +1162,25 @@
+ .site-footer__nav a:hover { color: var(--accent); }
++.site-footer__legal {
++  display: flex;
++  flex-wrap: wrap;
++  justify-content: space-between;
++  gap: 8px 24px;
++  max-width: calc(var(--container) + 2 * var(--gutter));
++  margin-inline: auto;
++  padding: 20px var(--gutter) 28px;
++  border-top: 1px solid var(--line);
++  font-size: 0.82rem;
++  color: var(--muted);
++}
++.site-footer__legal a { color: var(--ink-soft); text-decoration: underline; text-underline-offset: 0.2em; }
++.site-footer__legal a:hover { color: var(--accent); }
++
++.legal-page { padding-block: clamp(48px, 8vw, 104px) var(--section); }
++.legal-page__body { max-width: 760px; }
++.legal-page__body h2 { margin-top: 2em; font-size: 1.5em; color: var(--ink); }
++.legal-page__body h2:first-child { margin-top: 0; }
++.legal-page__print { padding: 4px 0 4px 20px; border-left: 3px solid var(--line); }
++.legal-page__print > * + * { margin-top: 0.8em; }
++.legal-page .legal-page__h { margin-top: 1.4em; font-size: 1.1em; color: var(--ink); }
++.legal-page .legal-page__h:first-child { margin-top: 0; }
+ 

@@ -1,4 +1,4 @@
-/* Router, Theme-Umschaltung, Menü und Seitensteuerung. */
+/* Router, Menü und Seitensteuerung. */
 (function (HD) {
   "use strict";
 
@@ -20,9 +20,9 @@
     document.querySelector('[data-nav="toc"]').setAttribute("href", C.href.toc());
     document.querySelector('[data-nav="regions"]').setAttribute("href", C.href.node(C.byNumber[HD.site.regionsChapter]));
     document.querySelector("[data-intro-link]").setAttribute("href", C.href.intro());
+    document.querySelector("[data-legal-link]").setAttribute("href", C.href.legal());
     document.querySelector("[data-drawer-nav]").innerHTML = HD.views.drawerNav();
     document.querySelector("[data-footer-nav]").innerHTML = HD.views.footerNav();
-    updateThemeLabel();
   }
 
   /* ---------- Routing ---------- */
@@ -48,6 +48,7 @@
     if (route.view === "home") html = HD.views.home();
     else if (route.view === "intro") html = HD.views.intro();
     else if (route.view === "toc") { html = HD.views.toc(); docTitle = t("navToc") + " – " + docTitle; }
+    else if (route.view === "legal") { html = HD.views.legal(); docTitle = t("legalTitle") + " – " + docTitle; }
     else if (route.view === "entry") {
       html = HD.views.entry(route.page);
       docTitle = route.page.number + " " + C.title(route.page) + " – " + docTitle;
@@ -90,6 +91,7 @@
 
   /* ---------- Seitenspezifische Bedienelemente ---------- */
   function bindPage() {
+    HD.atlas.mount(app);
     var filter = app.querySelector("[data-toc-filter]");
     if (filter) {
       var rootList = app.querySelector(".tree");
@@ -118,35 +120,6 @@
     });
     return any;
   }
-
-  /* ---------- Hell / Dunkel ---------- */
-  var THEMES = ["system", "light", "dark"];
-  var systemDark = matchMedia("(prefers-color-scheme: dark)");
-
-  function applyTheme(pref) {
-    var dark = pref === "dark" || (pref === "system" && systemDark.matches);
-    document.documentElement.dataset.theme = dark ? "dark" : "light";
-    document.documentElement.dataset.themePref = pref;
-    updateThemeLabel();
-  }
-
-  function updateThemeLabel() {
-    var pref = document.documentElement.dataset.themePref || "system";
-    var key = { system: "themeSystem", light: "themeLight", dark: "themeDark" }[pref];
-    var btn = document.querySelector("[data-theme-toggle]");
-    btn.title = t("themeToggle") + ": " + t(key);
-    btn.querySelector("[data-theme-label]").textContent = t("themeToggle") + ": " + t(key);
-  }
-
-  document.querySelector("[data-theme-toggle]").addEventListener("click", function () {
-    var pref = document.documentElement.dataset.themePref || "system";
-    var next = THEMES[(THEMES.indexOf(pref) + 1) % THEMES.length];
-    try { localStorage.setItem("hd-theme", next); } catch (e) { /* z. B. privater Modus */ }
-    applyTheme(next);
-  });
-  systemDark.addEventListener("change", function () {
-    if ((document.documentElement.dataset.themePref || "system") === "system") applyTheme("system");
-  });
 
   /* ---------- Mobiles Menü ---------- */
   var drawer = document.querySelector("[data-drawer]");

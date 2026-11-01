@@ -78,6 +78,7 @@
     home: function () { return "#/" + state.lang; },
     toc: function () { return "#/" + state.lang + "/icindekiler"; },
     intro: function () { return "#/" + state.lang + "/hosgeldiniz"; },
+    legal: function () { return "#/" + state.lang + "/kunye"; },
     node: function (node) {
       var page = pageOf(node);
       var base = "#/" + state.lang + "/madde/" + page.slug;
@@ -91,6 +92,7 @@
     if (!parts.length) return { lang: lang, view: "home" };
     if (parts[0] === "icindekiler") return { lang: lang, view: "toc" };
     if (parts[0] === "hosgeldiniz") return { lang: lang, view: "intro" };
+    if (parts[0] === "kunye") return { lang: lang, view: "legal" };
     if (parts[0] === "madde" && pageBySlug[parts[1]]) {
       var page = pageBySlug[parts[1]];
       var section = parts[2] ? page.children.filter(function (c) { return c.slug === parts[2]; })[0] : null;
@@ -107,10 +109,10 @@
   }
 
   /* Türkisch-sichere, akzentunabhängige Normalisierung für die Suche */
-  var FOLD = { "ç": "c", "ğ": "g", "ı": "i", "ö": "o", "ş": "s", "ü": "u", "â": "a", "î": "i", "û": "u", "’": "'" };
+  var FOLD = { "ç": "c", "ğ": "g", "ġ": "g", "ı": "i", "ö": "o", "ş": "s", "ü": "u", "â": "a", "î": "i", "û": "u", "’": "'" };
   function fold(s) {
     return String(s).replace(/I/g, "ı").replace(/İ/g, "i").toLowerCase()
-      .replace(/[çğıöşüâîû’]/g, function (c) { return FOLD[c]; });
+      .replace(/[çğġıöşüâîû’]/g, function (c) { return FOLD[c]; });
   }
 
   HD.core = {

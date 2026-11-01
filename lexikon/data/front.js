@@ -16,7 +16,22 @@ HD.front = {
         "Benimde hocalarım olan Hacettepe Üniversitesi Güzel Sanatlar Enstitüsü Müzikoloji Bölüm Başkanı ve Öğretim Üyesi Prof. Dr. **CEMİL DEMİRSİPAHİ**, Kültür ve Turizm Bakanlığı Devlet Halk dansları Müdürü **MUSTAFA TURAN** ve **SAMİ İŞEL**, Koreograf ve Sanat Yönetmeni **DUYGU AYKAL**, Erzurum ve Bitlis Yöresi danslarının büyük çalıştırıcısı ve dans üstadı **SEYİT KIRMIZI**, Araştırmacı, Derlemeci ve Artvin Halk danslarının üstadı **NAİL TAN**, Muğla yöresi Zeybeği üzerine kapsamlı araştırmaları ve derlemeleri olan Muğla Halk dansları Eğitmeni ve üstadı **BEKİR NALBANTOĞLU**, Adıyaman Halk danslarının büyük çalıştırıcısı **HAMZA ÇİVİ,** Gaziantep Yöresi Halk dansları Eğitmeni **ULVİ CAN,** ve diğer Hocalarıma ayrı ayrı Teşekkürlerimi sunuyorum."
       ],
       signature: ["NİYAZİ KILIÇ", "Halk Dansları Eğitmen ve Yönetici"]
-    }
+    },
+    legal: [
+      {
+        title: "İlgililerin Dikkatine",
+        paragraphs: [
+          "Bu Kitap, 6279 sayılı yasa gereğince, Çoğaltılmış Fikir ve Sanat Eserlerini Derleme Kanununa dayanılarak hazırlanmıştır.",
+          "Derleme Kanunu Yasası gereğince KÜLTÜR VE TURİZM BAKANLIĞI Tarafından Uygulanmaktadır."
+        ]
+      },
+      {
+        title: "UYARI",
+        paragraphs: [
+          "Bu Kitap’ı Hazırlayandan izinsiz olarak kurum, kuruluş veya kişiler tarafından, kısmen veya bölüm ya da tamamının, Kopyalanması, çoğaltılması veya tekrar baskıya alınması Kanunen yasaktır. Aksine hareket edenlerin 6279, 2936 ve 3257 sayılı yasalar gereğince suç sayılmaktadır."
+        ]
+      }
+    ]
   },
   en: null
 };

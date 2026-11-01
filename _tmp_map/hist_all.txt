@@ -1,0 +1,110 @@
+-site/.gitignore :: 10-16 21:31:00 85 -3319e2c3\z5CW Chat Edit: 'onayliyorum'
+-site/astro.config.mjs :: 10-16 21:31:00 1149 -73c71ce0\DCTI.mjs Chat Edit: 'onayliyorum' | 10-16 21:45:50 1184 -73c71ce0\b5Yo.mjs Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/baslat.cmd :: 10-16 21:39:36 488 4cc38b5e\3VVC.cmd Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/package.json :: 10-16 21:18:46 529 68274957\VhnX.json Chat Edit: 'onayliyorum' | 10-16 21:39:00 1079 68274957\YTGl.json Chat Edit: '@agent Continue: "Continue to iterate?"' | 10-16 21:53:02 1079 68274957\3Aww.json 
+-site/public/favicon.svg :: 10-16 21:34:36 452 51a5636b\yaM2.svg Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/scripts/check-links.py :: 10-16 21:43:10 1967 -487c3d8f\UIwe.py Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/scripts/prepare-images.mjs :: 10-16 21:30:50 4049 -370f758c\XI2O.mjs Chat Edit: 'onayliyorum'
+-site/src/components/EntryCard.astro :: 10-16 21:36:10 1372 -30890c14\e9kt.astro Chat Edit: '@agent Continue: "Continue to iterate?"' | 10-16 21:45:50 1466 -30890c14\s6Un.astro Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/src/components/EntryPage.astro :: 10-16 21:36:54 8559 -a94ffd5\Bszl.astro Chat Edit: '@agent Continue: "Continue to iterate?"' | 10-16 21:42:36 8577 -a94ffd5\zHbV.astro Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/src/components/Icon.astro :: 10-16 21:33:38 2410 22ad58f1\weP7.astro Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/src/components/Logo.astro :: 10-16 21:33:38 745 -17644b5d\sSXP.astro Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/src/components/NavTree.astro :: 10-16 21:33:56 5085 -14abd455\32Rr.astro Chat Edit: '@agent Continue: "Continue to iterate?"' | 10-16 21:39:50 5085 -14abd455\Egsx.astro Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/src/components/RegionCard.astro :: 10-16 21:36:18 1636 4b69431c\6wVv.astro Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/src/config/site.ts :: 10-16 21:21:38 7500 -64d7b535\8vlr.ts Chat Edit: 'onayliyorum' | 10-16 21:40:10 7888 -64d7b535\W85x.ts Chat Edit: '@agent Continue: "Continue to iterate?"' | 10-16 21:45:12 7881 -64d7b535\tj5m.ts Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/src/config/site.ts.new :: 10-16 21:22:10 7621 -1ac98003\ZPbu.new Chat Edit: 'onayliyorum'
+-site/src/demo/ornek-madde.md :: 10-16 21:38:50 2099 -545e5cd6\tgag.md Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/src/layouts/Base.astro :: 10-16 21:34:26 9473 -3448e8a6\KMBz.astro Chat Edit: '@agent Continue: "Continue to iterate?"' | 10-16 21:41:44 9568 -3448e8a6\5CMa.astro Chat Edit: '@agent Continue: "Continue to iterate?"' | 10-16 21:42:36 9819 -3448e8a6\ftf6.astro Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/src/lib/book/index.ts :: 10-16 21:26:50 8766 1d8e8425\h0B8.ts Chat Edit: 'onayliyorum' | 10-16 21:39:00 8744 1d8e8425\r9lV.ts Chat Edit: '@agent Continue: "Continue to iterate?"' | 10-16 21:40:16 8856 1d8e8425\Fwfh.ts Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/src/lib/book/parse.ts :: 10-16 21:40:10 11655 5da63aa4\Ijym.ts Chat Edit: '@agent Continue: "Continue to iterate?"' | 10-16 21:41:22 11860 5da63aa4\1KtD.ts Chat Edit: '@agent Continue: "Continue to iterate?"' | 10-16 21:45:38 11866 5da63aa4\FP6Z.ts Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/src/lib/book/render.ts :: 10-16 21:25:56 15986 321af00d\fB3Q.ts Chat Edit: 'onayliyorum' | 10-16 21:26:10 15952 321af00d\RrII.ts Chat Edit: 'onayliyorum' | 10-16 21:33:12 16047 321af00d\OPEk.ts Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/src/lib/book/text.ts :: 10-16 21:22:38 3586 -32be396a\zRTC.ts Chat Edit: 'onayliyorum' | 10-16 21:22:50 2986 -32be396a\XpsV.ts Chat Edit: 'onayliyorum'
+-site/src/lib/book/types.ts :: 10-16 21:24:04 1924 -116820e2\e0dM.ts Chat Edit: 'onayliyorum'
+-site/src/lib/fold.ts :: 10-16 21:22:44 832 -2da672d0\IJv0.ts Chat Edit: 'onayliyorum'
+-site/src/pages/%5B...path%5D.astro :: 10-16 21:36:54 605 -25ad4559\HGCn.astro Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/src/pages/404.astro :: 10-16 21:38:34 675 1dacc3ac\kjPD.astro Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/src/pages/a-z.astro :: 10-16 21:38:34 3135 6d04f402\MEnb.astro Chat Edit: '@agent Continue: "Continue to iterate?"' | 10-16 21:39:50 3135 6d04f402\YmhY.astro Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/src/pages/etiketler/%5Bid%5D.astro :: 10-16 21:38:08 1342 -115fd0f5\Eipq.astro Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/src/pages/favoriler.astro :: 10-16 21:38:34 1539 -4cd367fe\sGQn.astro Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/src/pages/index.astro :: 10-16 21:37:22 7439 -3537d4fa\Mpcp.astro Chat Edit: '@agent Continue: "Continue to iterate?"' | 10-16 21:39:50 7439 -3537d4fa\bWLQ.astro Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/src/pages/kategoriler/%5Bid%5D.astro :: 10-16 21:38:08 1474 784903b1\ZAA7.astro Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/src/pages/kategoriler/index.astro :: 10-16 21:38:08 3441 -34a99d16\UcyZ.astro Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/src/pages/robots.txt.ts :: 10-16 21:38:34 259 2b7a2f25\YAZs.ts Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/src/pages/search-index.json.ts :: 10-16 21:38:34 414 29a4e141\5g9q.ts Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/src/pages/yoreler/index.astro :: 10-16 21:37:40 2144 254ede27\XhWl.astro Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/src/scripts/main.ts :: 10-16 21:36:02 11166 -65d23b05\BoZf.ts Chat Edit: '@agent Continue: "Continue to iterate?"' | 10-16 21:37:40 11287 -65d23b05\5W4u.ts Chat Edit: '@agent Continue: "Continue to iterate?"' | 10-16 21:42:36 11729 -65d23b05\k1eu.ts Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/src/scripts/search.ts :: 10-16 21:35:10 7445 4175bcec\muvL.ts Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/src/scripts/storage.ts :: 10-16 21:34:36 1111 4835074b\YcAe.ts Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/src/styles/global.css :: 10-16 21:33:12 20265 bf2e133\04Tj.css Chat Edit: '@agent Continue: "Continue to iterate?"' | 10-16 21:45:00 20291 bf2e133\znTW.css Chat Edit: '@agent Continue: "Continue to iterate?"' | 10-16 21:46:14 20372 bf2e133\Okoj.css Chat Edit: '@agent Continue: "Continue to iterate?"'
+-site/tsconfig.json :: 10-16 21:31:00 130 395754e\ftNj.json Chat Edit: 'onayliyorum'
+/_tmp_map/fetch.py :: 10-31 22:15:06 502 9a18d7b\g74J.py Chat Edit: 'Ich möchte eine saubere, schöne interaktive Karte der Türkei'
+/_tmp_map/inspect_ne.py :: 10-31 22:17:02 598 -69e6c149\oVX8.py Chat Edit: 'Ich möchte eine saubere, schöne interaktive Karte der Türkei'
+/lexikon/assets/css/main.css :: 10-31 22:41:02 48443 -522dc2a5\YyBD.css  | 10-31 22:42:06 49459 -522dc2a5\zwlG.css Chat Edit: 'ja mach mal' | 10-31 22:50:20 44152 -522dc2a5\dvbv.css 
+/lexikon/assets/js/app.js :: 10-31 18:15:32 7396 2d5a98db\YppF.js Chat Edit: 'Mache den Darkmode weg' | 10-31 22:22:18 7422 2d5a98db\imjP.js Chat Edit: 'Ich möchte eine saubere, schöne interaktive Karte der Türkei' | 10-31 22:42:00 7625 2d5a98db\TfLH.js Chat Edit: 'ja mach mal'
+/lexikon/assets/js/core.js :: 10-30 17:59:44 4540 -19bb920d\IUvM.js Chat Edit: 'Du hast ja "kitabin yapisi" hinzugefügt. Ich finde das sehr gut und möchte das es auch hier drin bleibt. Der User möchte aber das alle Kapitel zusätzlich wie bei der Inhaltsverzeichnis abgebildet werden sollen ohne Blöcke. Überlege dir mal, ob man bevor die Startseite öffnet Eine Seite Startet, das den Sinn dieser Website kurz erläutert und welche Themen der Leser hier auf der Website erwarten kann. Und dann soll da so ein button zum klicken sein wo man dann endlich auf die website kommt' | 10-31 22:07:12 4553 -19bb920d\WiY9.js Chat Edit: '1. **Suche:** Sie findet bisher nur Überschriften. Ich kann sie auf den ganzen Text erweitern. -> ja mach es' | 10-31 22:42:00 4688 -19bb920d\utIa.js Chat Edit: 'ja mach mal'
+/lexikon/assets/js/map.js :: 10-31 22:22:10 5792 41015fc0\Xe7q.js Chat Edit: 'Ich möchte eine saubere, schöne interaktive Karte der Türkei' | 10-31 22:24:26 5847 41015fc0\KyDz.js Chat Edit: 'Ich möchte eine saubere, schöne interaktive Karte der Türkei' | 10-31 22:32:58 6561 41015fc0\H6Xy.js Chat Edit: '- Die Kartendaten stammen von Natural Earth. Sie sind gemeinfrei, ein Hinweis steht trotzdem auf der Karte. -> der hinweis soll nicht stehen
+- Die KArte kann man nicht ganz groß aufklappen wenn man auf den button klickt!'
+/lexikon/assets/js/motion.js :: 10-30 16:09:48 5923 -5a3e4044\Hnay.js Chat Edit: 'Lies die bereitgestellte Markdown-Datei, um das Thema sowie die Kapitel- und Unterkapitelstruktur zu verstehen. Erstelle darauf aufbauend ein erstes, funktionsfähiges Grundgerüst für eine Lexikon-Website. Ich möchte zunächst das Design und die Bedienung ansehen und verbessern, bevor die eigentlichen Inhalte eingebaut werden.
+
+**Anforderungen:**
+
+- Gestalte die Website passend zum Thema der Markdown-Datei. Leite Farbwelt, Typografie und Gestaltung aus dem Inhalt ab. Die Seite soll modern, hochwertig und eigenständig wirken – nicht wie eine generische KI-Vorlage.
+- Orientiere dich am hochwertigen Scrollerlebnis der Apple-Website: klare Typografie, großzügige Abstände, ein ruhiger Seitenaufbau und dezente Animationen beim Scrollen. Kopiere dabei nicht das Apple-Design oder dessen Inhalte.
+- Plane große, professionell gestaltete Bildbereiche für später ein; verwende zunächst nur klar erkennbare, neutrale Platzhalter und binde keine Bilder aus meinem Ordner ein. Animationen sollen flüssig sein, das Lesen nicht stören und bei reduzierter Bewegung zurückhaltend ausfallen.
+- Verwende die vorhandenen Kapitel- und Unterkapitelüberschriften für Navigation und Inhaltsverzeichnis. Erstelle eine Startseite und ein Layout für Lexikoneinträge.
+- **Übernimm noch keine Fließtexte, Tabellen oder Bilder.** Kennzeichne leere Inhaltsbereiche als solche. Die Markdown-Datei dient zunächst nur als Grundlage für Thema und Struktur.
+- Navigation und Suche sollen anhand der vorhandenen Überschriften ausprobiert werden können.
+- Das Layout soll auf Desktop, Tablet und Smartphone funktionieren und einen umschaltbaren Hell- und Dark Mode enthalten.
+- Bereite die Struktur für einen späteren Sprachwechsel zwischen Türkisch und Englisch vor. Eine Übersetzung oder ein fertiger Sprachschalter ist jetzt noch nicht nötig.
+- Wähle eine einfache, wartbare technische Lösung, in die sich die eigentlichen Markdown-Inhalte und Bilder später integrieren lassen.
+Stelle mir eine ausführbare Vorschau sowie die benötigten Projektdateien bereit. Erkläre kurz, wie ich das Projekt lokal starte. Veröffentliche die Website noch nicht und nimm keine Änderungen an einem bestehenden Repository vor.'
+/lexikon/assets/js/search.js :: 10-30 16:09:26 6187 3229fc8a\TxK3.js Chat Edit: 'Lies die bereitgestellte Markdown-Datei, um das Thema sowie die Kapitel- und Unterkapitelstruktur zu verstehen. Erstelle darauf aufbauend ein erstes, funktionsfähiges Grundgerüst für eine Lexikon-Website. Ich möchte zunächst das Design und die Bedienung ansehen und verbessern, bevor die eigentlichen Inhalte eingebaut werden.
+
+**Anforderungen:**
+
+- Gestalte die Website passend zum Thema der Markdown-Datei. Leite Farbwelt, Typografie und Gestaltung aus dem Inhalt ab. Die Seite soll modern, hochwertig und eigenständig wirken – nicht wie eine generische KI-Vorlage.
+- Orientiere dich am hochwertigen Scrollerlebnis der Apple-Website: klare Typografie, großzügige Abstände, ein ruhiger Seitenaufbau und dezente Animationen beim Scrollen. Kopiere dabei nicht das Apple-Design oder dessen Inhalte.
+- Plane große, professionell gestaltete Bildbereiche für später ein; verwende zunächst nur klar erkennbare, neutrale Platzhalter und binde keine Bilder aus meinem Ordner ein. Animationen sollen flüssig sein, das Lesen nicht stören und bei reduzierter Bewegung zurückhaltend ausfallen.
+- Verwende die vorhandenen Kapitel- und Unterkapitelüberschriften für Navigation und Inhaltsverzeichnis. Erstelle eine Startseite und ein Layout für Lexikoneinträge.
+- **Übernimm noch keine Fließtexte, Tabellen oder Bilder.** Kennzeichne leere Inhaltsbereiche als solche. Die Markdown-Datei dient zunächst nur als Grundlage für Thema und Struktur.
+- Navigation und Suche sollen anhand der vorhandenen Überschriften ausprobiert werden können.
+- Das Layout soll auf Desktop, Tablet und Smartphone funktionieren und einen umschaltbaren Hell- und Dark Mode enthalten.
+- Bereite die Struktur für einen späteren Sprachwechsel zwischen Türkisch und Englisch vor. Eine Übersetzung oder ein fertiger Sprachschalter ist jetzt noch nicht nötig.
+- Wähle eine einfache, wartbare technische Lösung, in die sich die eigentlichen Markdown-Inhalte und Bilder später integrieren lassen.
+Stelle mir eine ausführbare Vorschau sowie die benötigten Projektdateien bereit. Erkläre kurz, wie ich das Projekt lokal starte. Veröffentliche die Website noch nicht und nimm keine Änderungen an einem bestehenden Repository vor.' | 10-31 22:06:20 8427 3229fc8a\bd7a.js Chat Edit: '1. **Suche:** Sie findet bisher nur Überschriften. Ich kann sie auf den ganzen Text erweitern. -> ja mach es'
+/lexikon/assets/js/views.js :: 10-31 22:41:02 28197 4587642e\7m8I.js  | 10-31 22:42:00 29322 4587642e\O2Lk.js Chat Edit: 'ja mach mal' | 10-31 22:50:20 22664 4587642e\6QYt.js 
+/lexikon/data/front.js :: 10-30 17:36:30 4136 54643f28\0nkR.js Chat Edit: 'Die Startseite soll die ersten Seiten des Markdowns enthalten. Genau genommen das Bild von Niyazi und dann den Text: 1961 Dogumlu... und auch das önsöz. ' | 10-31 22:41:58 4903 54643f28\2qMy.js Chat Edit: 'ja mach mal'
+/lexikon/data/i18n.js :: 10-31 22:20:56 6550 62e3bdf\oLPZ.js Chat Edit: 'Ich möchte eine saubere, schöne interaktive Karte der Türkei' | 10-31 22:32:52 6593 62e3bdf\jLuS.js Chat Edit: '- Die Kartendaten stammen von Natural Earth. Sie sind gemeinfrei, ein Hinweis steht trotzdem auf der Karte. -> der hinweis soll nicht stehen
+- Die KArte kann man nicht ganz groß aufklappen wenn man auf den button klickt!' | 10-31 22:41:58 7855 62e3bdf\bAwg.js Chat Edit: 'ja mach mal'
+/lexikon/data/site.js :: 10-31 22:28:06 3498 7a055a16\zU3M.js Chat Edit: '@agent Continue: "Continue to iterate?"' | 10-31 22:28:34 3498 7a055a16\GrDJ.js Chat Edit: '@agent Continue: "Continue to iterate?"' | 10-31 22:50:20 1853 7a055a16\WWtm.js 
+/lexikon/index.html :: 10-31 22:41:02 5446 4bd01032\BQLU.html  | 10-31 22:42:06 5726 4bd01032\jQRA.html Chat Edit: 'ja mach mal' | 10-31 22:50:20 5382 4bd01032\6N4R.html 
+/lexikon/tools/build_content.py :: 10-31 21:57:34 8434 -696b53d2\hxhv.py Chat Edit: 'mach weiter' | 10-31 21:59:12 8443 -696b53d2\DzOB.py Chat Edit: 'mach weiter' | 10-31 22:20:30 8555 -696b53d2\QVLT.py Chat Edit: 'Beim tab "Yöreler" ist ein Bild das man nicht anklicken kann. Entferne es!'
+/lexikon/tools/build_map.py :: 10-31 22:19:44 9633 -4efbcb95\46Qq.py Chat Edit: 'Ich möchte eine saubere, schöne interaktive Karte der Türkei'
+/lexikon/tools/extract_content.py :: 10-31 18:34:20 3714 2ea107b\0D5K.py Chat Edit: 'mach weiter' | 10-31 18:34:58 3720 2ea107b\fQ8d.py Chat Edit: 'Mach weiter' | 10-31 19:48:48 3726 2ea107b\5UWG.py Chat Edit: 'mach weiter'
+/lexikon/tools/extract_structure.py :: 10-30 16:05:54 4875 2cb3fa01\8I2X.py Chat Edit: 'Lies die bereitgestellte Markdown-Datei, um das Thema sowie die Kapitel- und Unterkapitelstruktur zu verstehen. Erstelle darauf aufbauend ein erstes, funktionsfähiges Grundgerüst für eine Lexikon-Website. Ich möchte zunächst das Design und die Bedienung ansehen und verbessern, bevor die eigentlichen Inhalte eingebaut werden.
+
+**Anforderungen:**
+
+- Gestalte die Website passend zum Thema der Markdown-Datei. Leite Farbwelt, Typografie und Gestaltung aus dem Inhalt ab. Die Seite soll modern, hochwertig und eigenständig wirken – nicht wie eine generische KI-Vorlage.
+- Orientiere dich am hochwertigen Scrollerlebnis der Apple-Website: klare Typografie, großzügige Abstände, ein ruhiger Seitenaufbau und dezente Animationen beim Scrollen. Kopiere dabei nicht das Apple-Design oder dessen Inhalte.
+- Plane große, professionell gestaltete Bildbereiche für später ein; verwende zunächst nur klar erkennbare, neutrale Platzhalter und binde keine Bilder aus meinem Ordner ein. Animationen sollen flüssig sein, das Lesen nicht stören und bei reduzierter Bewegung zurückhaltend ausfallen.
+- Verwende die vorhandenen Kapitel- und Unterkapitelüberschriften für Navigation und Inhaltsverzeichnis. Erstelle eine Startseite und ein Layout für Lexikoneinträge.
+- **Übernimm noch keine Fließtexte, Tabellen oder Bilder.** Kennzeichne leere Inhaltsbereiche als solche. Die Markdown-Datei dient zunächst nur als Grundlage für Thema und Struktur.
+- Navigation und Suche sollen anhand der vorhandenen Überschriften ausprobiert werden können.
+- Das Layout soll auf Desktop, Tablet und Smartphone funktionieren und einen umschaltbaren Hell- und Dark Mode enthalten.
+- Bereite die Struktur für einen späteren Sprachwechsel zwischen Türkisch und Englisch vor. Eine Übersetzung oder ein fertiger Sprachschalter ist jetzt noch nicht nötig.
+- Wähle eine einfache, wartbare technische Lösung, in die sich die eigentlichen Markdown-Inhalte und Bilder später integrieren lassen.
+Stelle mir eine ausführbare Vorschau sowie die benötigten Projektdateien bereit. Erkläre kurz, wie ich das Projekt lokal starte. Veröffentliche die Website noch nicht und nimm keine Änderungen an einem bestehenden Repository vor.' | 10-30 16:06:46 4843 2cb3fa01\qcKO.py Chat Edit: 'Lies die bereitgestellte Markdown-Datei, um das Thema sowie die Kapitel- und Unterkapitelstruktur zu verstehen. Erstelle darauf aufbauend ein erstes, funktionsfähiges Grundgerüst für eine Lexikon-Website. Ich möchte zunächst das Design und die Bedienung ansehen und verbessern, bevor die eigentlichen Inhalte eingebaut werden.
+
+**Anforderungen:**
+
+- Gestalte die Website passend zum Thema der Markdown-Datei. Leite Farbwelt, Typografie und Gestaltung aus dem Inhalt ab. Die Seite soll modern, hochwertig und eigenständig wirken – nicht wie eine generische KI-Vorlage.
+- Orientiere dich am hochwertigen Scrollerlebnis der Apple-Website: klare Typografie, großzügige Abstände, ein ruhiger Seitenaufbau und dezente Animationen beim Scrollen. Kopiere dabei nicht das Apple-Design oder dessen Inhalte.
+- Plane große, professionell gestaltete Bildbereiche für später ein; verwende zunächst nur klar erkennbare, neutrale Platzhalter und binde keine Bilder aus meinem Ordner ein. Animationen sollen flüssig sein, das Lesen nicht stören und bei reduzierter Bewegung zurückhaltend ausfallen.
+- Verwende die vorhandenen Kapitel- und Unterkapitelüberschriften für Navigation und Inhaltsverzeichnis. Erstelle eine Startseite und ein Layout für Lexikoneinträge.
+- **Übernimm noch keine Fließtexte, Tabellen oder Bilder.** Kennzeichne leere Inhaltsbereiche als solche. Die Markdown-Datei dient zunächst nur als Grundlage für Thema und Struktur.
+- Navigation und Suche sollen anhand der vorhandenen Überschriften ausprobiert werden können.
+- Das Layout soll auf Desktop, Tablet und Smartphone funktionieren und einen umschaltbaren Hell- und Dark Mode enthalten.
+- Bereite die Struktur für einen späteren Sprachwechsel zwischen Türkisch und Englisch vor. Eine Übersetzung oder ein fertiger Sprachschalter ist jetzt noch nicht nötig.
+- Wähle eine einfache, wartbare technische Lösung, in die sich die eigentlichen Markdown-Inhalte und Bilder später integrieren lassen.
+Stelle mir eine ausführbare Vorschau sowie die benötigten Projektdateien bereit. Erkläre kurz, wie ich das Projekt lokal starte. Veröffentliche die Website noch nicht und nimm keine Änderungen an einem bestehenden Repository vor.'
